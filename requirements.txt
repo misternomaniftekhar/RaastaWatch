@@ -1,0 +1,10 @@
+streamlit>=1.38
+ultralytics>=8.3
+pillow>=10.0
+pandas>=2.0
+folium>=0.17
+streamlit-folium>=0.22
+streamlit-geolocation>=0.0.10
+imagehash>=4.3
+groq>=0.11
+python-dotenv>=1.0
