@@ -11,8 +11,13 @@ from streamlit_folium import st_folium
 
 load_dotenv()
 
-from core import db, detector, duplicates, geo, severity, summary  # noqa: E402
-
+try:
+    from core import db, detector, duplicates, geo, severity, summary  # noqa: E402
+except Exception as e:
+    import traceback
+    st.error(f"Import failed: {e}")
+    st.code(traceback.format_exc())
+    st.stop()
 st.set_page_config(page_title="RaastaWatch AI", page_icon="🛣️", layout="wide")
 db.init_db()
 
